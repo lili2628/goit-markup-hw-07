@@ -13,30 +13,30 @@
 </head>
 
 <body>
-    <header class="top">
-        <div class="container">
-            <nav class="main-nav">
+    <header class="page-header">
+        <div class="container page-header__container">
+            <nav class="flex-centered">
                 <a href="./index.html" class="logo">
-                    <span class="logo-web">Web</span>Studio</a>
+                    <span class="logo__first-part">Web</span>Studio</a>
     
-                <ul class="site-nav list">
-                    <li class="item"><a class="link" href="./index.html">Студія</a></li>
-                    <li class="item current-item"><a class="link current" href="./portfolio.html">Портфоліо</a></li>
-                    <li class="item"><a class="link" href="#contact">Контакти</a></li>
+                <ul class="site-nav list-clear">
+                    <li class="site-nav__item"><a class="link site-nav__link" href="./index.html">Студія</a></li>
+                    <li class="site-nav__item site-nav__item--current"><a class="link site-nav__link site-nav__link--current" href="./portfolio.html">Портфоліо</a></li>
+                    <li class="site-nav__item"><a class="link site-nav__link" href="#contact">Контакти</a></li>
                 </ul>
             </nav>
     
-            <div class="contacts list">
+            <div class="list-clear page-header__contacts">
             
-                <a class="link contacts-type" href="mailto:info@devstudio.com">
-                    <svg class="mail" width="16" height="12">
-                        <use href="./images/icons.svg#envelope" class="contacts-symbol"></use>
+                <a class="link page-header__mail-phone flex-centered" href="mailto:info@devstudio.com">
+                    <svg class="page-header__icon" width="16" height="12">
+                        <use href="./images/icons.svg#envelope"></use>
                     </svg>
                     info@devstudio.com
                 </a>
-                <a class="link contacts-type" href="tel:+380961111111">
-                    <svg class="phone" width="10" height="16">
-                        <use href="./images/icons.svg#smartphone" class="contacts-symbol"></use>
+                <a class="link page-header__mail-phone flex-centered" href="tel:+380961111111">
+                    <svg class="page-header__icon" width="10" height="16">
+                        <use href="./images/icons.svg#smartphone"></use>
                     </svg>
                     +38 096 111 11 11
                 </a>
@@ -68,7 +68,7 @@
                     </li>
                 </ul>
                     
-                <ul class="example list">
+                <ul class="example list-clear">
                     <li class="example-item">
                         <a class="example-link" href="">
                             <div class="example-thumb">
@@ -227,12 +227,12 @@
         </section>
     </main>
 
-    <footer class="bottom bgcolor-dark">
-        <div class="container bottom-contact">
+    <footer class="page-footer bgcolor-dark">
+        <div class="container page-footer-contact">
             <div class="contact-main part">
-                <a href="./index.html" class="logo">
-                    <span class="logo-web">Web</span>Studio</a>
-
+                <a href="./index.html" class="logo page-footer__logo">
+                    <span class="logo__first-part">Web</span>Studio</a>
+    
                 <address id="contact" class="connection">
                     <span class="contact-item">м. Київ, пр-т Лесі Українки, 26 </span>
                     <a class="contact-link contact-item" href="mailto:info@devstudio.com">
@@ -243,10 +243,10 @@
                     </a>
                 </address>
             </div>
-
+    
             <div class="community part">
                 <span class="community-text">приєднуйтесь</span>
-                <ul class="list community-list">
+                <ul class="list-clear community-list">
                     <li class="network">
                         <a class="link" href="">
                             <svg class="network-picture" width="20" height="20">
@@ -277,12 +277,12 @@
                     </li>
                 </ul>
             </div>
-
+    
             <div class="mailing part">
                 <span class="mailing-text">підпишіться на розсилку</span>
                 <form class="mailing-form">
                     <input class="mailing-help" type="email" name="user-mail" placeholder="E-mail" />
-
+    
                     <button class="mailing-btn buttons" type="submit">
                         <div class="mailing-btnbox">
                             <span class="mailing-btntext">Підписатися</span>
@@ -293,7 +293,7 @@
                     </button>
                 </form>
             </div>
-
+    
         </div>
     </footer>
 </body>
