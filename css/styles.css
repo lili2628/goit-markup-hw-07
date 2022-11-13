@@ -144,8 +144,6 @@ body{
     margin-right: 50px;
 }
 
-
-
 .page-header__icon{
     margin-right: 10px;
 
@@ -169,25 +167,22 @@ body{
 /*hero*/
 
 .hero{
-    color: var(--white-color);
-    text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
-}
-
-.bg-picture{
     max-width: 1600px;
     height: 600px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+
+    background-color: #2F303A;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
 
 }
 
-
-.hero-title{
+.hero__title{
     width: 696px;
     margin: 0 auto;
     margin-bottom: 30px;
@@ -197,6 +192,8 @@ body{
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    color: var(--white-color);
 }
 
 .buttons{
@@ -209,15 +206,15 @@ body{
     cursor: pointer;
 }
 
-.hero .buttons{
+.hero__buttons{
     letter-spacing: 0.03em;
     padding-right: 32px;
     padding-left: 32px;
 }
 
-.hero .buttons,
+.hero__buttons,
 .modal-submit.buttons,
-.mailing-btn.buttons
+.mailing-form__buttons
 {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -233,14 +230,11 @@ body{
 
 /*other sections*/
 
-.title-color{
-    color:var(--additional-page-color);
-}
 .features-list{
     display: flex;
 }
 
-.features-list .item:not(:last-child){
+.features-list__item:not(:last-child){
     margin-right: 30px;
 }
 
@@ -258,7 +252,7 @@ body{
     overflow: hidden;
 }
 
-.features-picture{
+.features-list__picture{
     width: 270px;
     height: 120px;
     margin-bottom: 30px;
@@ -271,23 +265,24 @@ body{
     background-color: #F5F4FA;
 }
 
-.features-subtitle,
-.community-text,
-.mailing-text {
+.features-list__subtitle,
+.community__text,
+.mailing__text {
     margin-top: 0;
     
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
-    text-transform: uppercase;
-    
+    text-transform: uppercase;  
 }
 
-.features-subtitle{
+.features-list__subtitle{
     margin-bottom: 10px;
+
+    color: var(--additional-page-color);
 }
 
-.features-text{
+.features-list__text{
     margin-top: 0;
     margin-bottom: 0;
 
@@ -295,9 +290,9 @@ body{
     line-height: 1.71;
 }
 
-.activities-title,
-.team-title,
-.clients-title {
+.activities__title,
+.team__title,
+.clients__title {
     margin-top: 0;
     margin-bottom: 50px;
     
@@ -305,25 +300,27 @@ body{
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+
+    color: var(--additional-page-color);
 }
 
-.activities.section{
+.activities{
     padding-top: 0;
 }
 
-.activities .list-clear{
+.activities-list{
     display: flex;
 }
 
-.activities-item:not(:last-child){
+.activities-list__item:not(:last-child){
     margin-right: 30px;
 }
 
-.activities-thumb {
+.activities-list__thumb {
     position: relative;
 }
 
-.activities-thumb::after {
+.activities-list__thumb::after {
     display: inline-block;
     position: absolute;
     content: '';
@@ -336,7 +333,11 @@ body{
     opacity: 1;
 }
 
-.act-text {
+.activities-list__picture {
+    display: block;
+}
+
+.activities-list__text {
     position: absolute;
     bottom: 27px;
     left: 50%;
@@ -354,48 +355,54 @@ body{
     text-transform: uppercase;
 }
 
-.act-picture{
-    display: block;
-}
-
-.bg-color{
+.team {
     background-color: #F5F4FA;
 }
 
-.team-members{
+.team-list{
     display: flex;
     justify-content: center;
 }
 
-.team-member:not(:last-child){
+.team-list__item:not(:last-child){
     margin-right: 30px;
 }
 
-.team-member,
+.team-list__item,
 .example-item{
     background-color:var(--white-color);
 }
 
-.photo{
+.team-member {
+    width: 270px;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.team-member__photo{
     display: block;
 }
 
-.team-description{
+.team-member__description{
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.team-subtitle{
+.team-member__name{
     margin-top: 0;
     margin-bottom: 10px;
 
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
-    text-align: center;  
+    text-align: center; 
+    color: var(--additional-page-color); 
 }
 
-.team-position{
+.team-member__position{
     margin-top: 0;
     margin-bottom: 16px;
 
@@ -403,33 +410,23 @@ body{
     text-align: center;
 }
 
-.container.card {
-    width: 270px;
-    padding-left: 0;
-    padding-right: 0;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
-    0px 1px 1px rgba(0, 0, 0, 0.14), 
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.community-list.community{
+.network-list--margin{
     margin-left: auto;
     margin-right: auto;
 }
 
-.team .link{
+.network-list__link--bgc{
     background-color: var(--white-color);
-    border-radius: 50%;
 }
 
-.team .network-symbol{
+.network-list__symbol--fill{
     transition: fill 250ms var(--function-timing);
 
     fill:var(--icon-color);
 }
 
-.team .link:hover .network-symbol,
-.team .link:focus .network-symbol{
+.network-list__link--bgc:hover .network-list__symbol--fill,
+.network-list__link--bgc:focus .network-list__symbol--fill{
     fill:var(--white-color);
 }
 
@@ -437,43 +434,38 @@ body{
     display: flex;
 }
 
-.clients-list .item:not(:last-child) {
+.clients-list__item:not(:last-child) {
     margin-right: 30px;
 }
 
-.clients-link{
+.clients-list__link{
     transition: border-color 250ms var(--function-timing);
 
-    display: inline-block;
     width: 170px;
     height: 92px;
     text-align: center;
     border: 1px solid var(--icon-color);
     border-radius: 4px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.clients-logo{
+.clients-link__logo{
     padding: 0;
     border: none;
 }
 
-.clients-symbol{
+.clients-list__symbol{
     transition: fill 250ms var(--function-timing);
 
     fill: var(--icon-color);
 }
 
-.clients-link:hover,
-.clients-link:focus{
+.clients-list__link:hover,
+.clients-list__link:focus{
     border-color: var(--accent-color);
 }
 
-.clients-link:hover .clients-symbol,
-.clients-link:focus .clients-symbol{
+.clients-list__link:hover .clients-list__symbol,
+.clients-list__link:focus .clients-list__symbol{
     fill: var(--accent-color);
 }
 
@@ -662,7 +654,6 @@ box-shadow 250ms var(--function-timing);
     margin-bottom: 9px;
 }
 
-
 .page-footer__mail-phone {
     transition: color 250ms var(--function-timing);
 
@@ -681,47 +672,40 @@ box-shadow 250ms var(--function-timing);
     color: var(--accent-color);
 }
 
-.community-list{
+.network-list{
     display: flex;
     width: 206px;
     justify-content: center;
 }
 
-.community .link{
-    display: block;
+.network-list__link{
     width: 44px;
     height: 44px;
+
+    transition: background-color 250ms var(--function-timing);
+    
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
 }
 
-.community-text,
-.mailing-text {
+.community__text,
+.mailing__text {
     display: inline-block;
     margin-bottom: 26px;
 
     color: var(--white-color);
 }
 
-.network:not(:last-child){
+.network-list__item:not(:last-child){
     margin-right: 10px;
 }
 
-.network .link{
-    transition: background-color 250ms var(--function-timing);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-}
-
-.network-symbol{
+.network-list__symbol{
     fill: var(--white-color);
 }
 
-.network .link:hover,
-.network .link:focus{
+.network-list__link:hover,
+.network-list__link:focus{
     background-color: var(--accent-color);
 }
 
@@ -731,25 +715,18 @@ box-shadow 250ms var(--function-timing);
     display: flex;
 }
 
-.mailing-btn{
+.mailing-form__buttons{
     letter-spacing: 0.06em;
     padding-right: 28px;
     padding-left: 28px;
     margin-left: 0;
 }
 
-.mailing-btnbox{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.mailing-btntext{
+.mailing-form__text{
     margin-right: 10px;
 }
 
-.mailing-help {
+.mailing-form__input {
     display: inline-block;
     padding-left: 15px;
     padding-right: 15px;
@@ -765,11 +742,11 @@ box-shadow 250ms var(--function-timing);
     background-color: #2F303A;
 }
 
-.send-symbol{
+.mailing-form__icon{
     fill: var(--white-color);
 }
 
-.mailing-help::placeholder{
+.mailing-form__input::placeholder{
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
