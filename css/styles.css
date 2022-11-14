@@ -492,17 +492,13 @@ body{
 
 /*additional portfolio styles*/
 
-.btn {
+
+.menu{
     margin-bottom: 50px;
     text-align: center;
 }
 
-.menu-list{
-    display: flex;
-    justify-content: center;
-}
-
-.menu-list .buttons {
+.menu__buttons {
 transition: color 250ms var(--function-timing),
 background-color 250ms var(--function-timing),
 box-shadow 250ms var(--function-timing);
@@ -516,16 +512,16 @@ box-shadow 250ms var(--function-timing);
     line-height: 1.62;
 }
 
-.menu-list .item:not(:last-child){
+.menu__item:not(:last-child){
     margin-right: 8px;
 }
 
-.buttons.button-all{
+.menu__buttons--padding{
     padding: 6px 25px;
 }
 
-.menu-list .buttons:hover,
-.menu-list .buttons:focus {
+.menu__buttons:hover,
+.menu__buttons:focus {
     color: var(--white-color);
     background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
@@ -533,20 +529,20 @@ box-shadow 250ms var(--function-timing);
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.example{
+.card-set{
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -30px;
 }
 
-.example-item{
+.card-set__item{
     flex-basis: calc(100%/3-30px);
     margin-top: 30px;
     margin-left: 30px;
 }
 
-.example-link {
+.project {
     transition: box-shadow 250ms var(--function-timing);
 
     display: inline-block;
@@ -557,18 +553,25 @@ box-shadow 250ms var(--function-timing);
     color: inherit; 
 }
 
-.example-link .picture {
+.project:hover,
+.project:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.project__thumb{
+    position: relative;
+    overflow: hidden;
+}
+
+.project__photo {
     display: block;
     margin-bottom: 0;
     margin-top: 0;
 }
 
-.example-thumb{
-    position: relative;
-    overflow: hidden;
-}
-
-.example-overlay{
+.overlay{
     position: absolute;
     top: 0;
     left: 0;
@@ -582,15 +585,17 @@ box-shadow 250ms var(--function-timing);
     background-color: rgba(33, 150, 243, 0.9);
 }
 
-.example-text {
+.overlay__object{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
-    width: 322px;
+    margin: 0; 
+}
 
-    margin: 0;
+.overlay__object--text{
+    width: 322px;
 
     color: var(--white-color);
     font-weight: 400;
@@ -598,19 +603,12 @@ box-shadow 250ms var(--function-timing);
     line-height: 1.56;
 }
 
-.example-link:hover,
-.example-link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-        0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.example-link:hover .example-overlay,
-.example-link:focus .example-overlay {
+.project:hover .overlay,
+.project:focus .overlay {
     transform: translateY(0);
 }
 
-.example-description{
+.project__description{
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 20px;
@@ -620,7 +618,7 @@ box-shadow 250ms var(--function-timing);
     border-right: 1px solid #EEEEEE;
 }
 
-.example-type{
+.project__object{
     margin-top: 0;
     margin-bottom: 4px;
 
@@ -628,9 +626,11 @@ box-shadow 250ms var(--function-timing);
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+
+    color: var(--additional-page-color);
 }
 
-.example-result{
+.project__result{
     margin-top: 0;
     margin-bottom: 0;    
 
